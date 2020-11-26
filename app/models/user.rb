@@ -7,4 +7,5 @@ class User < ApplicationRecord
     validates :email, uniqueness: true
     validates_length_of :user_name, minimum: 6, maximum: 12
     validates_length_of :password, minimum: 8
+    has_many :posts
 end
