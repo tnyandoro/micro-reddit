@@ -9,4 +9,5 @@ class User < ApplicationRecord
     validates_length_of :password, minimum: 8
 
     has_many :posts
+    has_many :comments
 end
