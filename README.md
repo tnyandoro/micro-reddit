@@ -5,7 +5,7 @@
 ## Preface
 This is a basic rails project focusing on active records. In this project, we have created models, validations for the models and associations between the models.
 ## Built with
-- Ruby v2.7.1
+- Ruby v2.7.2
 - Rails 6
 - SQLITE3
 ## Features
