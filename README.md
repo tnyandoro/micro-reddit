@@ -1,59 +1,88 @@
-# README
+# Micro-Reddit
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Micro-reddit-active-records
-## Preface
-This is a basic rails project focusing on active records. In this project, we have created models, validations for the models and associations between the models.
+## Project Description
+
+> This is micro-reddit project from microverse rails curriculum with features of users creating posts and making comments under posts.The project uses rails active records ORM(Object relational mapping) features, and it includes models, validations for the models and associations between the models.
+
 ## Built with
 - Ruby v2.7.2
 - Rails 6
-- SQLITE3
+- SQLite3
+
 ## Features
 - Creating a user
 - Creating a post
-- Creating a comment
+- Making a comment under a post
 
 ## Getting Started
 
 1. Compulsory Installations:
-- Git
-- Ruby 2.7.2 or latest version
-- RVM
+    - [Git](https://www.theodinproject.com/courses/foundations/lessons/setting-up-git)
+    - [Ruby 2.7.2 or latest version](https://www.theodinproject.com/courses/ruby-programming/lessons/installing-ruby-ruby-programming)
+    - Rails 6
+    ```
+    gem install rails
+    ```
+2. Get a local copy
 
-2. Rails Setup:
-Next we need to install dependencies and setup the database.
+    - Clone the repository
+    ```
+    git clone https://github.com/tnyandoro/micro-reddit/tree/feature_branch/micro-reddit
+    ```
+    - Go to the local repo and run 
+    ```
+    bundle install
+    ```
+    - Update your yarn if its out of date with 
+    ```
+    yarn install --check-files
+    ```
 
-3. Rails Console:
-Check that the console is working properly by running $ rails console in your terminal. 
-Run association tests in console to test for model connections.
-### Get a local copy
+3. Configure the database
+    - open the repo in a terminal
+    - run the following command
+    ```
+    rails db:migrate
+    ```
+4. Running the rails project
+    - open the repo in a terminal and run
+    ```
+    rails console
+    ```
+    - create users
 
-- Git clone https://github.com/tnyandoro/micro-reddit/tree/feature_branch/micro-reddit
-- Go to the local repo and run bundle install
-- Update your yarn if its out of date with yarn install --check-files
-### Get the database
-- Go to your terminal/command line interface
-- Go to your local copy of the repository
-- run rails db:create
-- run rails db:migrate
+        Example: 
+    ```
+    user1 = User.create(f_name: "Kevin", l_name: "Hart", email: "kevin@gmail.com", user_name: "kevin28", password: "12345678")
 
-### How to start the console
-- Run rails console
+    user2 = User.create(f_name: "Trevor", l_name: "Noah", email: "trevor@gmail.com", user_name: "Trevor29", password: "12345678")
+    ```
+    - make posts
 
-## Prerequisites 
--Rails v6
--Ruby v2.7.1
+        Example: (user1 makes a post)
+    ```
+    post1 = user1.posts.build(title: "How to be a successful comedian", body: "make fun of yourself")
 
-## Dependencies
-- rubocop 
+    p1.save
+    ```
+    - add comment to a post
+    
+        Example: (user2 adds a comment under a post made by user1)
+    ```
+    c1 = p1.comments.build(body: "that is helpful kevin thank you")
+
+    c1.user_id = user2.id
+    ```
 
 ## Authors
 
-👤 **Author1**
+👤 **Tendai Nyandoro**
 
 - GitHub: [@Tendai Nyandoro](https://github.com/tnyandoro)
 - Twitter: [@tendai28](https://twitter.com/tendai28)
 - LinkedIn: [Tendai Nyandoro](https://www.linkedin.com/in/tendai-nyandoro/)
+
 👤 **Binyam Hailemeskel**
 
 - GitHub: [@bini-i](https://github.com/bini-i)
