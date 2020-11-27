@@ -5,6 +5,19 @@
 
 > This is micro-reddit project from microverse rails curriculum with features of users creating posts and making comments under posts.The project uses rails active records ORM(Object relational mapping) features, and it includes models, validations for the models and associations between the models.
 
+## Preliminary data modeling
+
+- The modeling for the entities and attributes of the micro-reddit scenario are represented in the diagram below
+
+<div style="display:flex; flex-direction: column; justify-content: center; align-items: center">
+<img src='./app/assets/images/conceptual_design.png' width= "550" height= "350"> 
+<br>
+<img src='./app/assets/images/logical_design.png' width= "550" height= "350"> 
+</div>
+<!-- ![screenshot](./app/assets/images/conceptual_design.png)
+![screenshot](./app/assets/images/logical_design.png) -->
+<br>
+
 ## Built with
 - Ruby v2.7.2
 - Rails 6
