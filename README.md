@@ -50,6 +50,7 @@
     ```
     rails console
     ```
+    ### The project has the following features
     - create users
 
         Example: 
@@ -70,11 +71,25 @@
     
         Example: (user2 adds a comment under a post made by user1)
     ```
-    c1 = p1.comments.build(body: "that is helpful kevin thank you")
+    comment1 = p1.comments.build(body: "that is helpful kevin thank you")
 
-    c1.user_id = user2.id
+    comment1.user_id = user2.id
+
+    comment1.save
+    ```
+    - show a user's posts
+    ```
+    user1.posts
+    ```
+    - show a user's comments
+    ```
+    user2.comments
     ```
 
+    - show comments under a post
+    ```
+    post1.comments
+    ```
 ## Authors
 
 👤 **Tendai Nyandoro**
